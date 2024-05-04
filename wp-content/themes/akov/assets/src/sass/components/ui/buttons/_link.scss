@@ -1,0 +1,35 @@
+.btn-link {
+	display: inline-flex;
+	gap: rem(10);
+	width: fit-content;
+	padding: 0;
+	border: unset;
+	color: $black;
+	position: relative;
+	font-weight: 500;
+	
+	&-white {
+		color: $white;
+	}
+	
+	&-arrow-down {
+		border: unset;
+		
+		i {
+			animation: pulse 3s ease-out;
+			animation-iteration-count: infinite;
+			@keyframes pulse {
+				0% {
+					opacity: 0.5;
+				}
+				50% {
+					opacity: 1;
+					transform: translateY(rem(10));
+				}
+				100% {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
