@@ -1,50 +1,16 @@
 .btn {
-	display: inline-flex;
-	gap: rem(10);
-	width: fit-content;
-	padding: rem(15) rem(30);
-	border: solid rem(1) $black;
-	color: $black;
-	position: relative;
-	overflow: hidden;
-	z-index: 5;
-	font-weight: 500;
+	width: rem(200);
+	padding: rem(11) 0;
+	font-family: 'HelveticaNeue', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: rem(16);
+	line-height: 1.1875;
+	text-align: center;
+	color: $white;
 	cursor: pointer;
-	
-	&:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: rem(-50);
-		bottom: 0;
-		left: 0;
-		border-right: rem(50) solid transparent;
-		border-bottom: rem(80) solid $black;
-		transform: translateX(-100%);
-		transition: 0.5s ease-in-out;
-		z-index: -1;
-	}
-	
-	&:hover {
-		color: $white;
-	}
-	
-	&:hover:before {
-		transform: translateX(0);
-	}
-	
-	&-white {
-		border: solid rem(2) $white;
-		color: $white;
-		background: $black;
-		
-		&:before {
-			border-bottom: rem(80) solid $white;
-		}
-		
-		&:hover {
-			color: $black;
-		}
-	}
+	background: #6B8FF7;
+	border-radius: 14px;
+	border: none;
 }
 

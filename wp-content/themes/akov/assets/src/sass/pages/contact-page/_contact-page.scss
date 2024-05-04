@@ -1,0 +1,117 @@
+@import "../../base/_mixins.scss";
+@import "../../base/_variables.scss";
+@import "../../base/_colors.scss";
+
+.page-template-contact {
+	
+	.form {
+		display: flex;
+		flex-direction: column;
+		padding: rem(36) 0 rem(76) 0;
+		
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: rem(40);
+			
+			.form-content {
+				display: flex;
+				flex-direction: column;
+				gap: rem(40);
+				padding: rem(46) rem(127) rem(6);
+				background: #FCFAF7;
+				border-radius: rem(38);
+				
+				& > p {
+					font-family: 'Raleway', sans-serif;
+					font-style: normal;
+					font-weight: 400;
+					font-size: rem(18);
+					line-height: 1.166;
+					color: $black;
+					
+					a {
+						font-weight: 600;
+						color: #6B8FF7;
+					}
+				}
+				
+				.wpcf7 {
+					.screen-reader-response {
+						display: none;
+					}
+					
+					.wpcf7-form {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						gap: rem(40);
+						
+						label {
+							display: flex;
+							flex-direction: column;
+							gap: rem(8);
+							font-family: 'HelveticaNeue', sans-serif;
+							font-style: normal;
+							font-weight: 500;
+							font-size: rem(16);
+							line-height: 1.25;
+							color: #121417;
+							
+							.required {
+								color: #FF0000;
+							}
+							
+							.wpcf7-form-control-wrap {
+								display: flex;
+								flex-direction: column;
+								gap: rem(8);
+								
+								.wpcf7-form-control {
+									width: 100%;
+									padding: rem(20);
+									border: solid 2px #6B8FF7;
+									border-radius: rem(12);
+									font-family: 'HelveticaNeue', sans-serif;
+									font-style: normal;
+									font-weight: 300;
+									font-size: rem(16);
+									line-height: 1.1875;
+									color: $black;
+									
+									&::placeholder {
+										font-family: 'HelveticaNeue', sans-serif;
+										font-style: normal;
+										font-weight: 300;
+										font-size: rem(16);
+										line-height: 1.1875;
+										color: #6F7373;
+									}
+								}
+								
+								.wpcf7-not-valid-tip {
+									color: #FF0000;
+								}
+							}
+						}
+						
+						.wpcf7-submit {
+							align-self: center;
+						}
+						
+						.wpcf7-spinner {
+							display: none;
+						}
+						
+						.wpcf7-response-output {
+							padding-bottom: rem(20);
+							font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+	}
+}

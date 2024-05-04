@@ -3,4 +3,21 @@
 @import "../base/_colors.scss";
 
 .footer {
+	padding: rem(60) 0;
+	background: #103293;
+	
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		p {
+			font-family: 'Inter', sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size: rem(14);
+			line-height: 1.2;
+			color: $white;
+		}
+	}
 }
