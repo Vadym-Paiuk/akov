@@ -50,18 +50,6 @@
 			<?php endif; ?>
 		</div>
 		<div class="end">
-			<div class="header-hamburger">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<?php if ( ! empty( $header['button'] ) ): ?>
-				<a class="btn btn-white btn-open-contact-popup"
-				   href="#contact-popup">
-					<?php echo $header['button']; ?>
-				</a>
-			<?php endif; ?>
 		</div>
 	</div>
 </header>

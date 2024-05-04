@@ -7,6 +7,7 @@
 @include font-face("Raleway", "../fonts/Raleway/Raleway-SemiBold", 600, normal);
 @include font-face("Raleway", "../fonts/Raleway/Raleway-Bold", 700, normal);
 @include font-face("HelveticaNeue", "../fonts/HelveticaNeue/HelveticaNeueCyr-Light", 200, normal);
+@include font-face("HelveticaNeue", "../fonts/HelveticaNeue/HelveticaNeueCyr-LightItalic", 200, italic);
 @include font-face("HelveticaNeue", "../fonts/HelveticaNeue/HelveticaNeueCyr-Roman", 400, normal);
 @include font-face("HelveticaNeue", "../fonts/HelveticaNeue/HelveticaNeueCyr-Medium", 500, normal);
 @include font-face("HelveticaNeue", "../fonts/HelveticaNeue/HelveticaNeueCyr-Bold", 700, normal);
@@ -14,7 +15,6 @@
 h1 {
 	font-size: rem(42);
 	margin: 0;
-	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1.2;
 	
@@ -26,7 +26,6 @@ h1 {
 h2 {
 	font-size: rem(42);
 	margin: 0;
-	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1;
 	
@@ -38,7 +37,6 @@ h2 {
 h3 {
 	font-size: rem(26);
 	margin: 0;
-	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1.5;
 	
@@ -50,7 +48,6 @@ h3 {
 h4 {
 	font-size: rem(18);
 	margin: 0;
-	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1.5;
 	
@@ -62,7 +59,6 @@ h4 {
 h5 {
 	font-size: rem(16);
 	margin: 0;
-	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1.5;
 	
@@ -74,7 +70,6 @@ h5 {
 h6 {
 	font-size: rem(14);
 	margin: 0;
-	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1.5;
 }

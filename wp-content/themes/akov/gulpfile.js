@@ -30,19 +30,19 @@ gulp.task("zip-theme", function () {
         .pipe(ignore.exclude("node_modules"))
         .pipe(
             rename(function (path) {
-                path.dirname = "advocate/" + path.dirname;
+                path.dirname = "akov/" + path.dirname;
             })
         )
-        .pipe(zip("advocate.zip"))
+        .pipe(zip("akov.zip"))
         .pipe(gulp.dest(".."));
 });
 
-gulp.task("delete-zip-theme", () => del(["../advocate.zip"], {force: true}));
+gulp.task("delete-zip-theme", () => del(["../akov.zip"], {force: true}));
 
 gulp.task("server", function () {
     browserSync.init({
-        proxy: "http://advocate.loc",
-        host: "advocate.loc",
+        proxy: "http://akov.loc",
+        host: "akov.loc",
         open: "external",
         notify: false,
     });

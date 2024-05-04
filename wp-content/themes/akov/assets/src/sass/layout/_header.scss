@@ -3,7 +3,60 @@
 @import "../base/_colors.scss";
 
 .header {
-
+	position: relative;
+	padding: rem(33) 0;
+	background: #F9F9FC;
+	z-index: 5;
+	
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		.start {
+			
+			.custom-logo {
+				width: rem(108);
+			}
+		}
+		
+		.middle {
+			
+			.header-nav {
+				
+				.menu {
+					display: flex;
+					gap: rem(60);
+					
+					.menu-item {
+						
+						a {
+							font-family: 'HelveticaNeue', sans-serif;
+							font-style: normal;
+							font-weight: 400;
+							font-size: rem(16);
+							line-height: 1.1875;
+							color: $black;
+						}
+						
+						&.current_page_item {
+							a {
+								font-weight: 500;
+								line-height: 1.25;
+								color: #6B8FF7;
+							}
+						}
+						
+						&:hover {
+							a {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .header-mobile-menu {
