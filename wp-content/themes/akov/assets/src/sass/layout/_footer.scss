@@ -20,4 +20,8 @@
 			color: $white;
 		}
 	}
+	
+	@include media-breakpoint-down(md) {
+		padding: rem(40) 0;
+	}
 }
