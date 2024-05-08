@@ -50,40 +50,46 @@
 			<?php endif; ?>
 		</div>
 		<div class="end">
+			<div class="header-hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</div>
 	</div>
+	<div class="header-mobile-menu">
+		<?php
+		$menu_name = 'header-menu';
+		if ( has_nav_menu( $menu_name ) ) {
+			wp_nav_menu( [
+				'theme_location'  => $menu_name,
+				'menu'            => '',
+				'menu_class'      => 'menu-header-links mobile',
+				'menu_id'         => '',
+				'container'       => '',
+				'container_class' => '',
+				'container_id'    => '',
+				'fallback_cb'     => 'wp_page_menu',
+				'before'          => '',
+				'after'           => '',
+				'link_before'     => '',
+				'link_after'      => '',
+				'echo'            => true,
+				'depth'           => 0,
+				'walker'          => '',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'item_spacing'    => 'preserve',
+			] );
+		}
+		?>
+		<?php if ( ! empty( $header['button'] ) ): ?>
+			<a class="btn btn-open-contact-popup"
+			   href="#contact-popup">
+				<?php echo $header['button']; ?>
+			</a>
+		<?php endif; ?>
+	</div>
 </header>
-<div class="header-mobile-menu">
-	<?php
-	$menu_name = 'header-menu';
-	if ( has_nav_menu( $menu_name ) ) {
-		wp_nav_menu( [
-			'theme_location'  => $menu_name,
-			'menu'            => '',
-			'menu_class'      => 'menu-header-links mobile',
-			'menu_id'         => '',
-			'container'       => '',
-			'container_class' => '',
-			'container_id'    => '',
-			'fallback_cb'     => 'wp_page_menu',
-			'before'          => '',
-			'after'           => '',
-			'link_before'     => '',
-			'link_after'      => '',
-			'echo'            => true,
-			'depth'           => 0,
-			'walker'          => '',
-			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			'item_spacing'    => 'preserve',
-		] );
-	}
-	?>
-	<?php if ( ! empty( $header['button'] ) ): ?>
-		<a class="btn btn-open-contact-popup"
-		   href="#contact-popup">
-			<?php echo $header['button']; ?>
-		</a>
-	<?php endif; ?>
-</div>
 
 <main>

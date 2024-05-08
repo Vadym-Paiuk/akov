@@ -31,6 +31,7 @@ wp-config.php
 /wp-content/themes/*
 !/wp-content/themes/akov/
 !/wp-content/themes/akov/*
+/wp-content/themes/akov/assets/dist/
 
 # Node Modules
 **/node_modules/

@@ -8,6 +8,11 @@ if ( empty( $section ) ) {
 
 <section class="features">
 	<div class="container">
+		<?php if ( ! empty( $section['title'] ) ): ?>
+			<h2 class="section-title">
+				<?php echo $section['title']; ?>
+			</h2>
+		<?php endif; ?>
 		<?php if ( ! empty( $section['features_list'] ) ): ?>
 			<div class="features-list">
 				<?php foreach ( $section['features_list'] as $feature ): ?>

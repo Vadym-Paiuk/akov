@@ -293,6 +293,26 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_663923bf618d4",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_6636ba293ca25",
                     "label": "Features List",
                     "name": "features_list",
@@ -613,5 +633,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714862763
+    "modified": 1715020746
 }
