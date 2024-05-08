@@ -10,7 +10,11 @@
 	color: $white;
 	cursor: pointer;
 	background: #6B8FF7;
-	border-radius: 14px;
+	border-radius: rem(14);
 	border: none;
+	
+	@include media-breakpoint-down(md) {
+		font-size: rem(14);
+	}
 }
 
