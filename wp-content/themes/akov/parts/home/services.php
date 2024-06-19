@@ -16,7 +16,10 @@ if ( empty( $section ) ) {
 		<?php if ( ! empty( $section['services_list'] ) ): ?>
 			<div class="services-list">
 				<?php foreach ( $section['services_list'] as $services ): ?>
-					<div class="services-list-item">
+					<?php $hide_on_mobile = $services['hide_on_mobile']; ?>
+					<div class="services-list-item <?php if ( $hide_on_mobile ) {
+						echo 'hide-on-mobile';
+					} ?>">
 						<?php if ( ! empty( $services['image'] ) ): ?>
 							<?php echo wp_get_attachment_image( $services['image'], 'full' ); ?>
 						<?php endif; ?>

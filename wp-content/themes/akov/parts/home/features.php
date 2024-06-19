@@ -35,6 +35,24 @@ if ( empty( $section ) ) {
 								</p>
 							<?php endif; ?>
 						</div>
+						<?php if ( ! empty( $feature['title'] ) ): ?>
+							<h4 class="features-list-item-content-title-mobile">
+								<?php echo $feature['title']; ?>
+							</h4>
+						<?php endif; ?>
+						<div class="features-list-item-content-mobile">
+							<?php
+							if ( ! empty( $feature['image_mobile'] ) ) {
+								$args = [ 'class' => 'features-list-item-image-mobile' ];
+								echo wp_get_attachment_image( $feature['image_mobile'], 'full', false, $args );
+							}
+							?>
+							<?php if ( ! empty( $feature['description_mobile'] ) ): ?>
+								<p class="features-list-item-content-description-mobile">
+									<?php echo $feature['description_mobile']; ?>
+								</p>
+							<?php endif; ?>
+						</div>
 					</div>
 				<?php endforeach; ?>
 			</div>

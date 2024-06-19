@@ -254,6 +254,27 @@
                             "prepend": "",
                             "append": "",
                             "parent_repeater": "field_6636b9e23ca20"
+                        },
+                        {
+                            "key": "field_6654d6c6c15e0",
+                            "label": "Hide on Mobile",
+                            "name": "hide_on_mobile",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "parent_repeater": "field_6636b9e23ca20"
                         }
                     ]
                 }
@@ -361,6 +382,32 @@
                             "parent_repeater": "field_6636ba293ca25"
                         },
                         {
+                            "key": "field_6654d815d56c1",
+                            "label": "Image Mobile",
+                            "name": "image_mobile",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium",
+                            "parent_repeater": "field_6636ba293ca25"
+                        },
+                        {
                             "key": "field_6636ba3e3ca27",
                             "label": "Title",
                             "name": "title",
@@ -385,6 +432,27 @@
                             "key": "field_6636ba423ca28",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": "",
+                            "parent_repeater": "field_6636ba293ca25"
+                        },
+                        {
+                            "key": "field_6654d806d56c0",
+                            "label": "Description Mobile",
+                            "name": "description_mobile",
                             "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
@@ -633,5 +701,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715020746
+    "modified": 1716836390
 }

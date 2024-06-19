@@ -102,6 +102,21 @@ a {
 	overflow: hidden;
 }
 
+.hide-on-mobile {
+	
+	@include media-breakpoint-down(md) {
+		display: none !important;
+	}
+}
+
+.clear,
+.clear:before,
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .popup-contact {
 	display: flex;
 	justify-content: center;
