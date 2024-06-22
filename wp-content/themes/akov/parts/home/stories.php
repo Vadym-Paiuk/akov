@@ -11,7 +11,7 @@ if ( empty( $section ) ) {
 		<?php if ( ! empty( $section['stories_list'] ) ): ?>
 			<div class="stories-list">
 				<?php foreach ( $section['stories_list'] as $story ): ?>
-					<div class="stories-list-item">
+					<div class="stories-list-item" data-aos="zoom-in" data-aos-duration="700">
 						<?php if ( ! empty( $story['title'] ) ): ?>
 							<h4 class="stories-list-item-title">
 								<?php echo $story['title']; ?>

@@ -10,7 +10,7 @@ if ( empty( $section ) ) {
 	<div class="partners-header">
 		<div class="container">
 			<?php if ( ! empty( $section['title'] ) ): ?>
-				<h2 class="partners-title">
+				<h2 class="partners-title" data-aos="zoom-in" data-aos-duration="700">
 					<?php echo $section['title']; ?>
 				</h2>
 			<?php endif; ?>
@@ -19,9 +19,9 @@ if ( empty( $section ) ) {
 	<div class="partners-content">
 		<div class="container">
 			<?php if ( ! empty( $section['partners_list'] ) ): ?>
-				<div class="partners-list">
+				<div class="partners-list" data-aos="zoom-in" data-aos-duration="700">
 					<?php foreach ( $section['partners_list'] as $partner ): ?>
-						<div class="partners-list-item">
+						<div class="partners-list-item"> 
 							<?php
 							if ( ! empty( $partner['image'] ) ) {
 								$args = [ 'class' => 'partners-list-item-image' ];

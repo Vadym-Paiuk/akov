@@ -1,6 +1,6 @@
 <?php
 $section = get_field( 'features' );
-
+$path = get_template_directory_uri();
 if ( empty( $section ) ) {
 	return;
 }
@@ -9,14 +9,14 @@ if ( empty( $section ) ) {
 <section class="features">
 	<div class="container">
 		<?php if ( ! empty( $section['title'] ) ): ?>
-			<h2 class="section-title">
+			<h2 class="section-title" data-aos="fade-up" data-aos-duration="700">
 				<?php echo $section['title']; ?>
 			</h2>
 		<?php endif; ?>
 		<?php if ( ! empty( $section['features_list'] ) ): ?>
 			<div class="features-list">
 				<?php foreach ( $section['features_list'] as $feature ): ?>
-					<div class="features-list-item">
+					<div class="features-list-item" data-aos="fade-up" data-aos-duration="1000">
 						<?php
 						if ( ! empty( $feature['image'] ) ) {
 							$args = [ 'class' => 'features-list-item-image' ];

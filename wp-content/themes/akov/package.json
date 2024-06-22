@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "@thelevicole/youtube-to-html5-loader": "^5.0.0",
+    "aos": "^2.3.4",
     "axios": "^1.1.3",
     "daterangepicker": "github:dangrossman/daterangepicker",
     "fabric": "^5.2.4",
@@ -75,6 +76,7 @@
     "jquery-ui": "^1.13.2",
     "lodash": "^4.17.21",
     "magnific-popup": "^1.1.0",
+    "masonry-layout": "^4.2.2",
     "moment": "^2.29.4",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.7.3",
