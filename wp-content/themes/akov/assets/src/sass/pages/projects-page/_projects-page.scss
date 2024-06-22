@@ -1,0 +1,119 @@
+.projects-grid {
+   overflow: hidden;
+   &__inner {
+      // width: 100%;
+      // max-width: rem(1365);
+      // margin-inline: auto;
+      padding: rem(36) 0 rem(80) 0;
+      @include media-breakpoint-down(md) {
+         padding: rem(20) 0 rem(30) 0;
+      }
+   }
+
+   &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: rem(16);
+      margin-bottom: clamp(rem(30), vw(50), rem(50));
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+         @extend .section-title;
+      }
+      p {
+         font-family: "Raleway", sans-serif;
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(18);
+         line-height: 1.166;
+         color: $black;
+
+         a {
+            font-weight: 600;
+            color: #6b8ff7;
+
+            &[href^="mailto"] {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+
+   &__items {
+      margin-inline: auto;
+      @media (max-width: 1023.98px) {
+         display: none;
+      }
+   }
+   &__item {
+      img {
+         display: block;
+         height: auto;
+         width: 100%;
+         object-fit: cover;
+      }
+
+      @media (min-width: 1023.98px) {
+         margin-bottom: rem(70);
+      }
+   }
+
+   &__slider {
+      @media (min-width: 1023.98px) {
+         display: none;
+      }
+      @media (max-width: 1023.98px) {
+         height: clamp(rem(500), vw(1200), rem(1200));
+         overflow: visible;
+         padding-block: rem(30);
+         .swiper-wrapper {
+            padding-bottom: rem(70);
+         }
+      }
+   }
+   &__slide {
+      overflow: hidden;
+      border-radius: rem(20);
+      box-shadow: 0 rem(3) rem(30) rgba($color: #313f57, $alpha: 0.2);
+   }
+   &__slide-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(108.74deg, #ffffff -13.26%, #deebff 123.21%);
+
+      padding: rem(35);
+      img {
+         max-width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+   .swiper-pagination {
+      position: static !important;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(6);
+      padding-inline: rem(10);
+   }
+   .swiper-pagination-bullet {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 0 rem(8);
+      height: rem(8);
+      border-radius: 50%;
+
+      opacity: 1;
+   }
+}
