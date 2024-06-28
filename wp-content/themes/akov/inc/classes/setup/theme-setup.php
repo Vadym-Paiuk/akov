@@ -70,7 +70,7 @@ class Theme_Setup {
 			define( 'THEME_DIR_URI', untrailingslashit( get_template_directory_uri() ) );
 		}
 		if ( ! defined( 'THEME_VERSION' ) ) {
-			define( 'THEME_VERSION', untrailingslashit( get_template_directory_uri() ) );
+			define( 'THEME_VERSION', '1.0.1' );
 		}
 		if ( ! defined( 'NONCE_CODE' ) ) {
 			define( 'NONCE_CODE', untrailingslashit( get_template_directory_uri() ) );
