@@ -7,7 +7,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: rem(36) 0 rem(76) 0;
-
+		
 		.container {
 			display: flex;
 			justify-content: center;
@@ -15,17 +15,17 @@
 			flex-direction: column;
 			gap: rem(40);
 			max-width: rem(1200);
-
+			
 			.form-header {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				gap: rem(16);
-
+				
 				.form-header-description {
 					width: 80%;
 					text-align: center;
-
+					
 					p {
 						font-family: "Raleway", sans-serif;
 						font-style: normal;
@@ -33,11 +33,11 @@
 						font-size: rem(18);
 						line-height: 1.166;
 						color: $black;
-
+						
 						a {
 							font-weight: 600;
 							color: #6b8ff7;
-
+							
 							&[href^="mailto"] {
 								text-decoration: underline;
 							}
@@ -45,7 +45,7 @@
 					}
 				}
 			}
-
+			
 			.form-content {
 				display: flex;
 				flex-direction: column;
@@ -54,18 +54,18 @@
 				background: #f6f6fa;
 				border-radius: rem(38);
 				width: 100%;
-
+				
 				.wpcf7 {
 					.screen-reader-response {
 						display: none;
 					}
-
+					
 					.wpcf7-form {
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
 						gap: rem(40);
-
+						
 						label {
 							display: flex;
 							flex-direction: column;
@@ -76,16 +76,25 @@
 							font-size: rem(16);
 							line-height: 1.25;
 							color: #121417;
-
+							
+							p {
+								font-family: "HelveticaNeue", sans-serif;
+								font-style: normal;
+								font-weight: 500;
+								font-size: rem(16);
+								line-height: 1.25;
+								color: #121417;
+							}
+							
 							.required {
 								color: #ff0000;
 							}
-
+							
 							.wpcf7-form-control-wrap {
 								display: flex;
 								flex-direction: column;
 								gap: rem(8);
-
+								
 								.wpcf7-form-control {
 									width: 100%;
 									padding: rem(20);
@@ -97,7 +106,7 @@
 									font-size: rem(16);
 									line-height: 1.1875;
 									color: $black;
-
+									
 									&::placeholder {
 										font-family: "HelveticaNeue", sans-serif;
 										font-style: normal;
@@ -107,22 +116,22 @@
 										color: #6f7373;
 									}
 								}
-
+								
 								.wpcf7-not-valid-tip {
 									color: #ff0000;
 								}
 							}
 						}
-
+						
 						.wpcf7-submit {
 							margin-top: rem(-10);
 							align-self: center;
 						}
-
+						
 						.wpcf7-spinner {
 							display: none;
 						}
-
+						
 						.wpcf7-response-output {
 							display: none;
 							padding-bottom: rem(20);
@@ -133,25 +142,25 @@
 			}
 		}
 	}
-
+	
 	@include media-breakpoint-down(md) {
 		.form {
 			padding: rem(20) 0 rem(30) 0;
-
+			
 			.container {
 				gap: rem(30);
-
+				
 				.form-header {
 					gap: rem(14);
-
+					
 					.form-header-description {
 						width: 100%;
-
+						
 						p {
 							font-weight: 500;
 							font-size: rem(16);
 							line-height: normal;
-
+							
 							a {
 								font-weight: 500;
 								color: #6b8ff7;
@@ -159,37 +168,37 @@
 						}
 					}
 				}
-
+				
 				.form-content {
 					gap: rem(20);
 					padding: rem(30) rem(18);
 					border-radius: rem(16);
 					width: 100%;
-
+					
 					.wpcf7 {
 						.screen-reader-response {
 							display: none;
 						}
-
+						
 						.wpcf7-form {
 							gap: rem(20);
-
+							
 							label {
 								.required {
 									color: #ff0000;
 								}
-
+								
 								.wpcf7-form-control-wrap {
 									display: flex;
 									flex-direction: column;
 									gap: rem(8);
-
+									
 									.wpcf7-form-control {
 										padding: rem(20) rem(10);
 									}
 								}
 							}
-
+							
 							.wpcf7-submit {
 								margin-top: rem(10);
 							}
