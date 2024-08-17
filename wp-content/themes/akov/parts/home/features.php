@@ -1,22 +1,24 @@
 <?php
 $section = get_field( 'features' );
-$path = get_template_directory_uri();
+$path    = get_template_directory_uri();
 if ( empty( $section ) ) {
 	return;
 }
 ?>
 
-<section class="features">
+<section class="features"
+         data-aos="zoom-in"
+         data-aos-duration="700">
 	<div class="container">
 		<?php if ( ! empty( $section['title'] ) ): ?>
-			<h2 class="section-title" data-aos="fade-up" data-aos-duration="700">
+			<h2 class="section-title">
 				<?php echo $section['title']; ?>
 			</h2>
 		<?php endif; ?>
 		<?php if ( ! empty( $section['features_list'] ) ): ?>
 			<div class="features-list">
 				<?php foreach ( $section['features_list'] as $feature ): ?>
-					<div class="features-list-item" data-aos="fade-up" data-aos-duration="1000">
+					<div class="features-list-item">
 						<?php
 						if ( ! empty( $feature['image'] ) ) {
 							$args = [ 'class' => 'features-list-item-image' ];

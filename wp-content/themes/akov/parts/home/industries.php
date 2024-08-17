@@ -6,14 +6,14 @@ if ( empty( $section ) ) {
 }
 ?>
 
-<section class="industries">
+<section class="industries"
+         data-aos="zoom-in"
+         data-aos-duration="700">
 	<div class="industries__header">
 		<div class="container">
 			<div class="industries__header-inner">
 				<?php if ( ! empty( $section['title'] ) ): ?>
-					<h2 class="section-title"
-					    data-aos="fade-up"
-					    data-aos-duration="700">
+					<h2 class="section-title">
 						<?php echo $section['title']; ?>
 					</h2>
 				<?php endif; ?>
@@ -24,9 +24,7 @@ if ( empty( $section ) ) {
 	<div class="industries__main">
 		<div class="container">
 			<?php if ( ! empty( $section['industries_list'] ) ): ?>
-				<div class="industries__main-grid"
-				     data-aos="fade-up"
-				     data-aos-duration="1000">
+				<div class="industries__main-grid">
 					<?php foreach ( $section['industries_list'] as $feature ): ?>
 						<div class="industries__main-item">
 							<div class="industries__item-icon">

@@ -6,10 +6,12 @@ if ( empty( $section ) ) {
 }
 ?>
 
-<section class="services">
+<section class="services"
+         data-aos="zoom-in"
+         data-aos-duration="700">
 	<div class="container">
 		<?php if ( ! empty( $section['title'] ) ): ?>
-			<h2 class="section-title" data-aos="fade-up">
+			<h2 class="section-title">
 				<?php echo $section['title']; ?>
 			</h2>
 		<?php endif; ?>
@@ -19,7 +21,7 @@ if ( empty( $section ) ) {
 					<?php $hide_on_mobile = $services['hide_on_mobile']; ?>
 					<div class="services-list-item <?php if ( $hide_on_mobile ) {
 						echo 'hide-on-mobile';
-					} ?>" data-aos="fade-up" data-aos-duration="1000">
+					} ?>">
 						<?php if ( ! empty( $services['image'] ) ): ?>
 							<?php echo wp_get_attachment_image( $services['image'], 'full' ); ?>
 						<?php endif; ?>

@@ -16,7 +16,7 @@ $path = get_stylesheet_directory_uri();
 			</div>
 			
 			<div class="projects-grid__items grid"
-			     data-aos="fade-up"
+			     data-aos="zoom-in"
 			     data-aos-duration="700">
 				<?php
 				$projects = get_field( 'projects' );

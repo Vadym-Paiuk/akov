@@ -6,29 +6,31 @@ if ( empty( $section ) ) {
 }
 ?>
 
-<section class="hero">
+<section class="hero"
+         data-aos="zoom-in"
+         data-aos-duration="700">
 	<div class="container">
 		<div class="hero-header">
 			<?php if ( ! empty( $section['title'] ) ): ?>
-				<h1 class="hero-header-title" data-aos="fade-up">
+				<h1 class="hero-header-title">
 					<?php echo $section['title']; ?>
 				</h1>
 			<?php endif; ?>
 			<?php if ( ! empty( $section['subtitle'] ) ): ?>
-				<p class="hero-header-subtitle" data-aos="fade-up">
+				<p class="hero-header-subtitle">
 					<?php echo $section['subtitle']; ?>
 				</p>
 			<?php endif; ?>
 		</div>
-		<div class="hero-content" >
-			<div class="hero-content-start"data-aos="fade-right">
+		<div class="hero-content">
+			<div class="hero-content-start">
 				<?php if ( ! empty( $section['text_1'] ) ): ?>
-					<p >
+					<p>
 						<?php echo $section['text_1']; ?>
 					</p>
 				<?php endif; ?>
 			</div>
-			<div class="hero-content-end"data-aos="fade-left">
+			<div class="hero-content-end">
 				<?php if ( ! empty( $section['text_2'] ) ): ?>
 					<p>
 						<?php echo $section['text_2']; ?>
