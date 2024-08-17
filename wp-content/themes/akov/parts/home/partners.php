@@ -6,11 +6,13 @@ if ( empty( $section ) ) {
 }
 ?>
 
-<section class="partners">
+<section class="partners"
+         data-aos="zoom-in"
+         data-aos-duration="700">
 	<div class="partners-header">
 		<div class="container">
 			<?php if ( ! empty( $section['title'] ) ): ?>
-				<h2 class="partners-title" data-aos="zoom-in" data-aos-duration="700">
+				<h2 class="partners-title">
 					<?php echo $section['title']; ?>
 				</h2>
 			<?php endif; ?>
@@ -19,9 +21,9 @@ if ( empty( $section ) ) {
 	<div class="partners-content">
 		<div class="container">
 			<?php if ( ! empty( $section['partners_list'] ) ): ?>
-				<div class="partners-list" data-aos="zoom-in" data-aos-duration="700">
+				<div class="partners-list">
 					<?php foreach ( $section['partners_list'] as $partner ): ?>
-						<div class="partners-list-item"> 
+						<div class="partners-list-item">
 							<?php
 							if ( ! empty( $partner['image'] ) ) {
 								$args = [ 'class' => 'partners-list-item-image' ];
