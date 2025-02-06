@@ -1,16 +1,16 @@
 .btn {
 	width: rem(200);
 	padding: rem(11) 0;
-	font-family: 'HelveticaNeue', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: rem(16);
-	line-height: 1.1875;
+	line-height: 1.17;
 	text-align: center;
 	color: $white;
 	cursor: pointer;
-	background: #6B8FF7;
-	border-radius: rem(14);
+	background: #6287D7;
+	border-radius: rem(8);
 	border: none;
 	
 	@include media-breakpoint-down(md) {

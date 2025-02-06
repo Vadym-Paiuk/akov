@@ -8,9 +8,9 @@ if ( empty( $section ) ) {
 
 <section class="services"
          data-aos="zoom-in"
-         data-aos-duration="700">
+         data-aos-duration="900">
 	<div class="container">
-		<?php if ( ! empty( $section['title'] ) ): ?>
+		<?php if ( ! empty( $section['title'] ) && false ): ?>
 			<h2 class="section-title">
 				<?php echo $section['title']; ?>
 			</h2>
@@ -23,7 +23,9 @@ if ( empty( $section ) ) {
 						echo 'hide-on-mobile';
 					} ?>">
 						<?php if ( ! empty( $services['image'] ) ): ?>
-							<?php echo wp_get_attachment_image( $services['image'], 'full' ); ?>
+							<div class="services-list-item-image">
+								<?php echo wp_get_attachment_image( $services['image'], 'full' ); ?>
+							</div>
 						<?php endif; ?>
 						<?php if ( ! empty( $services['title'] ) ): ?>
 							<h4 class="services-list-item-title">

@@ -80,7 +80,7 @@
                     "label": "Text 1",
                     "name": "text_1",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -90,10 +90,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_6636b9ba3ca1b",
@@ -550,32 +550,6 @@
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
-                            "key": "field_6676ecc2da370",
-                            "label": "Image",
-                            "name": "image",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "preview_size": "medium",
-                            "parent_repeater": "field_6676ecb4da36e"
-                        },
-                        {
                             "key": "field_6676ecbcda36f",
                             "label": "Title",
                             "name": "title",
@@ -827,5 +801,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719069929
+    "modified": 1737741239
 }

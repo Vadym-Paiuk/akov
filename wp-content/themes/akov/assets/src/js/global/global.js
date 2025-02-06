@@ -6,6 +6,7 @@ class Global {
         this.loader();
         this.dropdown();
         this.mobileMenu();
+        this.pricingTabs();
     }
 
     static getInstance() {
@@ -15,6 +16,31 @@ class Global {
 
         return this.instance;
     }
+
+    pricingTabs() {
+        $(document).on('click', '.pricing-page__per-project__tabs-header-title', function (e) {
+            e.preventDefault();
+
+            if ($(this).hasClass('hidden')) {
+                return false;
+            }
+
+            if ($(this).hasClass('active')) {
+                return false;
+            }
+
+            let index = $(this).index(); // Get the index of the clicked tab
+
+            // Remove 'active' class from all titles and tabs
+            $('.pricing-page__per-project__tabs-header-title').removeClass('active');
+            $('.pricing-page__per-project__tabs-body__tab').removeClass('active');
+
+            // Add 'active' class to the clicked title and the corresponding tab
+            $('.pricing-page__per-project__tabs-body__tab').eq(index).addClass('active');
+            $(this).addClass('active');
+        });
+    }
+
 
     dropdown() {
         $(document).on('click', '.toggle-dropdown', function (e) {
@@ -54,6 +80,7 @@ class Global {
             $('body').toggleClass('no-scroll-menu');
         });
     }
+
     loader() {
         $.LoadingOverlaySetup({
             background: "rgba(255, 255, 255, 1)",

@@ -10,14 +10,63 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		row-gap: rem(30);
+		flex-wrap: wrap;
 		
 		p {
-			font-family: 'Inter', sans-serif;
+			font-family: 'Raleway', sans-serif;
 			font-style: normal;
 			font-weight: 500;
 			font-size: rem(14);
 			line-height: 1.2;
 			color: $white;
+		}
+	}
+	
+	&__block {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		
+		&-copyright {
+			display: flex;
+			//align-items: flex-end;
+			justify-content: flex-start;
+		}
+	}
+	
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		
+		.menu-title {
+			font-family: 'Raleway', sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			color: #A6AAC9;
+		}
+		
+		ul {
+			display: flex;
+			gap: rem(16);
+			
+			li {
+				a {
+					font-family: 'Raleway', sans-serif;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 1.79;
+					color: #FFFFFF;
+					
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
 		}
 	}
 	

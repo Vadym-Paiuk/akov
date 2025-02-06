@@ -8,7 +8,7 @@ if ( empty( $section ) ) {
 
 <section class="partners"
          data-aos="zoom-in"
-         data-aos-duration="700">
+         data-aos-duration="900">
 	<div class="partners-header">
 		<div class="container">
 			<?php if ( ! empty( $section['title'] ) ): ?>

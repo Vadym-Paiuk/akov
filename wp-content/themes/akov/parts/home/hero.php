@@ -8,34 +8,27 @@ if ( empty( $section ) ) {
 
 <section class="hero"
          data-aos="zoom-in"
-         data-aos-duration="700">
+         data-aos-duration="900">
 	<div class="container">
+		<?php if ( ! empty( $section['subtitle'] ) ): ?>
+			<p class="hero-header-subtitle">
+				<?php echo $section['subtitle']; ?>
+			</p>
+		<?php endif; ?>
 		<div class="hero-header">
 			<?php if ( ! empty( $section['title'] ) ): ?>
 				<h1 class="hero-header-title">
 					<?php echo $section['title']; ?>
 				</h1>
 			<?php endif; ?>
-			<?php if ( ! empty( $section['subtitle'] ) ): ?>
-				<p class="hero-header-subtitle">
-					<?php echo $section['subtitle']; ?>
-				</p>
-			<?php endif; ?>
 		</div>
 		<div class="hero-content">
-			<div class="hero-content-start">
+			<div class="hero-content-text">
 				<?php if ( ! empty( $section['text_1'] ) ): ?>
-					<p>
-						<?php echo $section['text_1']; ?>
-					</p>
+					<?php echo $section['text_1']; ?>
 				<?php endif; ?>
 			</div>
-			<div class="hero-content-end">
-				<?php if ( ! empty( $section['text_2'] ) ): ?>
-					<p>
-						<?php echo $section['text_2']; ?>
-					</p>
-				<?php endif; ?>
+			<div class="hero-content-link">
 				<?php if ( ! empty( $section['link'] ) ): ?>
 					<a href="<?php echo $section['link']['url']; ?>"
 					   target="<?php echo $section['link']['target']; ?>"
