@@ -107,7 +107,10 @@ class Theme_Setup {
 	
 	public function register_menus() {
 		register_nav_menus( array(
-			'header-menu' => esc_html__( 'Header Menu' ),
+			'header-menu'     => esc_html__( 'Header Menu' ),
+			'services-menu'   => esc_html__( 'Services Menu' ),
+			'company-menu'    => esc_html__( 'Company Menu' ),
+			'industries-menu' => esc_html__( 'Industries Menu' ),
 		) );
 	}
 	

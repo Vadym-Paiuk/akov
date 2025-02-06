@@ -5,7 +5,7 @@
 html {
 	scroll-behavior: smooth;
 	font-size: vw(16);
-
+	
 	@include media-breakpoint-down(md) {
 		font-size: vwm(16);
 	}
@@ -21,7 +21,7 @@ body {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "HelveticaNeue", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	min-width: rem(320);
@@ -55,7 +55,7 @@ body {
 
 main {
 	position: relative;
-	background: #fcfaf7;
+	background: #ffffff;
 	flex: 1;
 }
 
@@ -73,17 +73,18 @@ a {
 	max-width: rem(1260);
 	width: 100%;
 	margin: 0 auto;
-
+	
 	@include media-breakpoint-down(md) {
 		padding: 0 rem(26);
 	}
 }
+
 .container-big {
 	max-width: rem(1460);
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 rem(10);
-
+	
 	@include media-breakpoint-down(md) {
 		padding: 0 rem(26);
 	}
@@ -92,13 +93,14 @@ a {
 .section-title {
 	position: relative;
 	width: fit-content;
-	font-family: "Raleway", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: rem(40);
-	text-align: center;
-	color: #6b8ff7;
-
+	font-size: rem(48);
+	line-height: 1.17;
+	color: #313F57;
+	width: 100%;
+	
 	@include media-breakpoint-down(md) {
 		font-size: rem(20);
 	}
@@ -138,11 +140,11 @@ a {
 	background: $black;
 	transition: $transition-all-easy-in-out;
 	z-index: 1000;
-
+	
 	&.active {
 		left: 0;
 	}
-
+	
 	&:before {
 		content: "";
 		position: absolute;
@@ -154,24 +156,24 @@ a {
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
-
+		
 		@include media-breakpoint-down(md) {
 			content: none;
 		}
 	}
-
+	
 	.btn-close-contact-popup {
 		position: absolute;
 		top: rem(50);
 		inset-inline-end: rem(50);
 		font-size: rem(50);
 		color: $white;
-
+		
 		@include media-breakpoint-down(md) {
 			font-size: rem(30);
 		}
 	}
-
+	
 	.popup-contact-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -179,95 +181,95 @@ a {
 		padding: rem(30);
 		border: solid rem(2) $white;
 		color: $white;
-
+		
 		h3 {
 			font-size: rem(40);
 		}
-
+		
 		.wpcf7 {
 			.screen-reader-response {
 				display: none !important;
 			}
-
+			
 			.wpcf7-form {
 				display: flex;
 				flex-direction: column;
 				gap: rem(20);
 				width: 30vw;
-
+				
 				.wpcf7-form-control-wrap {
 					display: flex;
 					flex-direction: column;
 					gap: rem(15);
-
+					
 					.wpcf7-form-control {
 						padding: rem(20);
 						font-size: rem(20);
 					}
-
+					
 					.wpcf7-not-valid-tip {
 						font-size: rem(20);
 					}
-
+					
 					textarea {
 						max-width: 100%;
 						max-height: rem(100);
 					}
 				}
-
+				
 				.btn {
 					align-self: center;
 				}
-
+				
 				.wpcf7-response-output {
 					font-size: rem(20);
 				}
 			}
 		}
-
+		
 		@include media-breakpoint-down(md) {
 			gap: rem(20);
 			padding: rem(20);
-
+			
 			h3 {
 				font-size: rem(25);
 			}
-
+			
 			.wpcf7 {
 				.screen-reader-response {
 					display: none !important;
 				}
-
+				
 				.wpcf7-form {
 					display: flex;
 					flex-direction: column;
 					gap: rem(20);
 					width: 80vw;
-
+					
 					.wpcf7-form-control-wrap {
 						display: flex;
 						flex-direction: column;
 						gap: rem(15);
-
+						
 						.wpcf7-form-control {
 							padding: rem(20);
 							font-size: rem(20);
 						}
-
+						
 						.wpcf7-not-valid-tip {
 							font-size: rem(20);
 						}
-
+						
 						textarea {
 							max-width: 100%;
 							max-height: rem(100);
 						}
 					}
-
+					
 					.btn {
 						align-self: center;
 					}
-
+					
 					.wpcf7-response-output {
 						font-size: rem(20);
 					}

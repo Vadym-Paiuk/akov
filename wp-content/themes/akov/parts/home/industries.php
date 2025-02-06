@@ -8,7 +8,7 @@ if ( empty( $section ) ) {
 
 <section class="industries"
          data-aos="zoom-in"
-         data-aos-duration="700">
+         data-aos-duration="900">
 	<div class="industries__header">
 		<div class="container">
 			<div class="industries__header-inner">
@@ -27,13 +27,6 @@ if ( empty( $section ) ) {
 				<div class="industries__main-grid">
 					<?php foreach ( $section['industries_list'] as $feature ): ?>
 						<div class="industries__main-item">
-							<div class="industries__item-icon">
-								<?php
-								if ( ! empty( $feature['image'] ) ) {
-									echo wp_get_attachment_image( $feature['image'], 'full' );
-								}
-								?>
-							</div>
 							<div class="industries__item-text">
 								<?php if ( ! empty( $feature['title'] ) ): ?>
 									<p>

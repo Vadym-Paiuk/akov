@@ -10,14 +10,14 @@ $path = get_stylesheet_directory_uri();
 		<div class="projects-grid__inner">
 			<div class="projects-grid__header"
 			     data-aos="zoom-in"
-			     data-aos-duration="700">
+			     data-aos-duration="900">
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 			</div>
 			
 			<div class="projects-grid__items grid"
 			     data-aos="zoom-in"
-			     data-aos-duration="700">
+			     data-aos-duration="900">
 				<?php
 				$projects = get_field( 'projects' );
 				foreach ( $projects as $project ):
@@ -30,82 +30,6 @@ $path = get_stylesheet_directory_uri();
 						?>
 					</div>
 				<?php endforeach; ?>
-				
-				<!--<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-1.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-2.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-3.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-4.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-5.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-6.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-7.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-8.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-9.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-10.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-11.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-12.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-13.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-14.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>
-				<div class="projects-grid__item grid-item">
-					<img src="<?php /*echo $path; */ ?>/assets/src/images/project-15.png"
-					     alt="hyita"
-					     loading="lazy">
-				</div>-->
 			</div>
 			
 			<div class="projects-grid__slider swiper">

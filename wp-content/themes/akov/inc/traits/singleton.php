@@ -18,7 +18,4 @@ trait Singleton_Trait {
 	
 	private function __clone() {
 	}
-	
-	private function __wakeup() {
-	}
 }
