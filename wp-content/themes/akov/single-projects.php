@@ -6,13 +6,29 @@
 					<?php $fields = get_field( 'fields' ); ?>
 					<div class="single__projects__header">
 						<?php $archive_link = get_post_type_archive_link( 'projects' ); ?>
-						<a href="<?php echo $archive_link; ?>"
-						   class="btn btn-back">Back</a>
-						<h1><?php the_title(); ?></h1>
+						<a
+								data-aos="zoom-in"
+								
+								
+								href="<?php echo $archive_link; ?>"
+								class="btn btn-back">Back</a>
+						<h1
+								data-aos="zoom-in"
+						
+						
+						><?php the_title(); ?></h1>
 						<?php if ( ! empty( $fields['subtitle'] ) ): ?>
-							<span class="single__projects__header-subtitle"><?php echo $fields['subtitle']; ?></span>
+							<span
+									data-aos="zoom-in"
+									
+									
+									class="single__projects__header-subtitle"><?php echo $fields['subtitle']; ?></span>
 						<?php endif; ?>
-						<div class="single__projects__header-description">
+						<div
+								data-aos="zoom-in"
+								
+								
+								class="single__projects__header-description">
 							<?php if ( ! empty( $fields['description_title'] ) ): ?>
 								<p class="single__projects__header-description-title"><?php echo $fields['description_title']; ?></p>
 							<?php endif; ?>
@@ -23,7 +39,11 @@
 							</div>
 						</div>
 						<?php if ( ! empty( $fields['image'] ) ): ?>
-							<div class="single__projects__header-image">
+							<div
+									data-aos="zoom-in"
+									
+									
+									class="single__projects__header-image">
 								<?php echo wp_get_attachment_image( $fields['image'], 'full' ); ?>
 							</div>
 						<?php endif; ?>
@@ -42,4 +62,4 @@
 			?>
 		</div>
 	</div>
-<?php get_footer( 'private' ); ?>
+<?php get_footer(); ?>

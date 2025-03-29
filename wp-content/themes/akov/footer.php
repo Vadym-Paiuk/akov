@@ -36,7 +36,7 @@ $footer = get_field( 'footer', 'options' );
 		<div class="footer__block">
 			<div class="footer__menu">
 				<?php
-				$menu_name = 'company-menu';
+				$menu_name = 'industries-menu';
 				if ( has_nav_menu( $menu_name ) ) {
 					wp_nav_menu( [
 						'theme_location'  => $menu_name,
@@ -64,7 +64,7 @@ $footer = get_field( 'footer', 'options' );
 		<div class="footer__block">
 			<div class="footer__menu">
 				<?php
-				$menu_name = 'industries-menu';
+				$menu_name = 'company-menu';
 				if ( has_nav_menu( $menu_name ) ) {
 					wp_nav_menu( [
 						'theme_location'  => $menu_name,
@@ -98,7 +98,7 @@ $footer = get_field( 'footer', 'options' );
 		</div>
 	</div>
 </footer>
-
+<div class="menu-overlay"></div>
 <?php wp_footer(); ?>
 </body>
 

@@ -33,6 +33,7 @@
 
 <?php $header = get_field( 'header', 'options' ); ?>
 <header class="header">
+	<div class="menu-header-overlay"></div>
 	<div class="container">
 		<div class="start">
 			<?php the_custom_logo(); ?>

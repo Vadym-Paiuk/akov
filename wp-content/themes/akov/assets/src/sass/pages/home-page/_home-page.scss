@@ -59,10 +59,10 @@
 				align-items: flex-start;
 				
 				.hero-header-title {
-					font-family: "Raleway", sans-serif;
+					font-family: "Roboto", sans-serif;
 					font-style: normal;
 					font-weight: 700;
-					font-size: rem(48);
+					font-size: rem(28);
 					line-height: 1.375;
 					text-transform: uppercase;
 					color: #313F57;
@@ -81,7 +81,7 @@
 						font-family: "Roboto", sans-serif;
 						font-style: normal;
 						font-weight: 300;
-						font-size: rem(32);
+						font-size: rem(24);
 						line-height: 1.4;
 						color: $black;
 						
@@ -103,55 +103,53 @@
 		
 		@include media-breakpoint-down(md) {
 			position: relative;
-			padding: rem(14) 0 rem(20) 0;
+			padding: rem(17) 0 rem(42) 0;
 			z-index: 5;
 			
 			.container {
 				gap: rem(14);
 				
+				.hero-header-subtitle {
+					font-size: rem(14);
+					line-height: 1.27;
+				}
+				
 				.hero-header {
 					.hero-header-title {
 						font-size: rem(20);
-						line-height: 1;
+						line-height: 1.35;
 						text-align: center;
-						color: #6b8ff7;
-					}
-					
-					.hero-header-subtitle {
-						font-size: rem(14);
-						line-height: 1.27;
+						color: #313F57;
 					}
 				}
 				
 				.hero-content {
 					flex-direction: column;
 					align-items: center;
-					gap: rem(14);
+					gap: rem(20);
 					
-					.hero-content-start {
-						flex: 1;
+					.hero-content-text {
 						
 						p {
+							font-style: normal;
+							font-weight: 300;
+							font-size: 16px;
+							line-height: 140.4%;
 							text-align: center;
-							font-size: rem(16);
-							line-height: normal;
-							font-weight: 500;
+							color: #000000;
+							
+							strong {
+								font-weight: 700;
+								color: #313f57;
+							}
 						}
 					}
 					
-					.hero-content-end {
+					.hero-content-link {
 						display: flex;
-						flex-direction: column;
-						flex: 1;
-						gap: rem(30);
-						width: 100%;
-						
-						p {
-							display: none;
-						}
 						
 						.btn {
-							width: 100%;
+							width: fit-content;
 						}
 					}
 				}
@@ -216,17 +214,18 @@
 		@include media-breakpoint-down(md) {
 			.container {
 				gap: rem(14);
+				padding: 0;
 				
 				.services-list {
 					display: flex;
 					flex-wrap: wrap;
-					row-gap: rem(7);
-					column-gap: rem(20);
+					row-gap: rem(35);
+					column-gap: rem(40);
 					
 					.services-list-item {
-						width: calc(50% - rem(10));
+						width: calc(50% - rem(20));
 						flex-direction: column;
-						padding: rem(15);
+						padding: rem(0);
 						border-radius: rem(10);
 						gap: rem(10);
 						justify-content: flex-start;
@@ -272,10 +271,15 @@
 					gap: rem(26);
 					
 					.features-list-item-image {
-						width: rem(240);
+						flex: 0 0 rem(265);
 						height: 100%;
-						object-fit: cover;
-						border-radius: rem(16);
+						
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							border-radius: rem(16);
+						}
 					}
 					
 					.features-list-item-content-title-mobile {
@@ -333,60 +337,45 @@
 					.features-list-item {
 						display: flex;
 						flex-direction: column !important;
+						justify-content: center;
+						align-items: center;
 						border-radius: rem(16);
 						width: 100%;
+						height: rem(341);
 						padding: rem(20);
 						background: linear-gradient(108.74deg, #ffffff -13.26%, #deebff 123.21%);
+						position: relative;
 						
 						&:nth-child(even) {
 							background: linear-gradient(288.74deg, #ffffff -33.26%, #deebff 123.21%);
 						}
 						
 						.features-list-item-image {
-							display: none;
-						}
-						
-						.features-list-item-content-title {
-							display: none;
-						}
-						
-						.features-list-item-content-title-mobile {
-							display: block;
-							font-family: "Raleway", sans-serif;
-							font-style: normal;
-							font-weight: 600;
-							font-size: rem(18);
-							line-height: 1.14;
-							color: #6b8ff7;
+							position: absolute;
+							width: 90%;
+							height: 90%;
+							top: 50%;
+							transform: translateY(-50%);
+							right: rem(20);
+							/*background: rgba(107, 143, 247, 0.7);
+							mix-blend-mode: overlay;*/
+							
+							img {
+								opacity: 0.4;
+							}
 						}
 						
 						.features-list-item-content {
-							display: none;
-						}
-						
-						.features-list-item-content-mobile {
-							display: flex;
-							gap: rem(10);
-						}
-						
-						&:nth-child(even) {
-							.features-list-item-content-mobile {
-								display: block;
-								flex-direction: column;
-								box-sizing: border-box;
-								
-								.features-list-item-content-description-mobile {
-									display: inline;
-									margin: 0 0 10px 0;
-									line-height: 1.6;
-								}
-								
-								.features-list-item-image-mobile {
-									float: left;
-									margin: 0 rem(10) 0 0;
-									max-width: rem(150);
-									max-height: rem(150);
-								}
+							position: relative;
+							width: 90%;
+							height: 90%;
+							background-color: $white;
+							border-radius: rem(12);
+							padding: rem(14);
+							
+							.features-list-item-content-description {
+								font-size: rem(14);
+								line-height: 1.8;
 							}
 						}
 					}
@@ -448,16 +437,17 @@
 		
 		@include media-breakpoint-down(md) {
 			overflow: hidden;
+			padding: 0 0 rem(20) 0;
 			
 			&:before {
 				content: "";
 				position: absolute;
-				top: 0;
-				left: 50%;
-				transform: translateX(-50%);
+				top: unset;
+				bottom: rem(-45);
+				left: rem(40);
 				width: 100%;
 				height: 100%;
-				background-image: url('data:image/svg+xml,<svg width="428" height="628" viewBox="0 0 428 628" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="329.489" cy="227.149" rx="111.759" ry="108.364" transform="rotate(0.922257 329.489 227.149)" fill="url(%23paint0_radial_98_388)"/><ellipse cx="329.489" cy="227.149" rx="111.759" ry="108.364" transform="rotate(0.922257 329.489 227.149)" fill="url(%23paint1_radial_98_388)"/><ellipse cx="329.489" cy="227.149" rx="111.759" ry="108.364" transform="rotate(0.922257 329.489 227.149)" fill="url(%23paint2_radial_98_388)"/><ellipse cx="399.595" cy="366.487" rx="89.2051" ry="87.062" transform="rotate(0.922257 399.595 366.487)" fill="url(%23paint3_radial_98_388)"/><ellipse cx="399.595" cy="366.487" rx="89.2051" ry="87.062" transform="rotate(0.922257 399.595 366.487)" fill="url(%23paint4_radial_98_388)"/><ellipse cx="399.595" cy="366.487" rx="89.2051" ry="87.062" transform="rotate(0.922257 399.595 366.487)" fill="url(%23paint5_radial_98_388)"/><ellipse cx="175.228" cy="427.26" rx="107.122" ry="104.549" transform="rotate(0.922257 175.228 427.26)" fill="url(%23paint6_radial_98_388)"/><ellipse cx="175.228" cy="427.26" rx="107.122" ry="104.549" transform="rotate(0.922257 175.228 427.26)" fill="url(%23paint7_radial_98_388)"/><ellipse cx="175.228" cy="427.26" rx="107.122" ry="104.549" transform="rotate(0.922257 175.228 427.26)" fill="url(%23paint8_radial_98_388)"/><ellipse cx="335.898" cy="513.317" rx="66.8561" ry="65.2499" transform="rotate(0.922257 335.898 513.317)" fill="url(%23paint9_radial_98_388)"/><ellipse cx="335.898" cy="513.317" rx="66.8561" ry="65.2499" transform="rotate(0.922257 335.898 513.317)" fill="url(%23paint10_radial_98_388)"/><ellipse cx="335.898" cy="513.317" rx="66.8561" ry="65.2499" transform="rotate(0.922257 335.898 513.317)" fill="url(%23paint11_radial_98_388)"/><ellipse cx="187.374" cy="576.32" rx="47.0688" ry="45.938" transform="rotate(0.922257 187.374 576.32)" fill="url(%23paint12_radial_98_388)"/><ellipse cx="187.374" cy="576.32" rx="47.0688" ry="45.938" transform="rotate(0.922257 187.374 576.32)" fill="url(%23paint13_radial_98_388)"/><ellipse cx="187.374" cy="576.32" rx="47.0688" ry="45.938" transform="rotate(0.922257 187.374 576.32)" fill="url(%23paint14_radial_98_388)"/><circle cx="76.2124" cy="122.214" r="114.386" transform="rotate(0.922257 76.2124 122.214)" fill="url(%23paint15_radial_98_388)"/><circle cx="76.2124" cy="122.214" r="114.386" transform="rotate(0.922257 76.2124 122.214)" fill="url(%23paint16_radial_98_388)"/><circle cx="76.2124" cy="122.214" r="114.386" transform="rotate(0.922257 76.2124 122.214)" fill="url(%23paint17_radial_98_388)"/><circle cx="379.242" cy="84.2424" r="77.0123" transform="rotate(0.922257 379.242 84.2424)" fill="url(%23paint18_radial_98_388)"/><circle cx="379.242" cy="84.2424" r="77.0123" transform="rotate(0.922257 379.242 84.2424)" fill="url(%23paint19_radial_98_388)"/><circle cx="379.242" cy="84.2424" r="77.0123" transform="rotate(0.922257 379.242 84.2424)" fill="url(%23paint20_radial_98_388)"/><circle cx="15.0566" cy="307.057" r="89.6256" transform="rotate(0.922257 15.0566 307.057)" fill="url(%23paint21_radial_98_388)"/><circle cx="15.0566" cy="307.057" r="89.6256" transform="rotate(0.922257 15.0566 307.057)" fill="url(%23paint22_radial_98_388)"/><circle cx="15.0566" cy="307.057" r="89.6256" transform="rotate(0.922257 15.0566 307.057)" fill="url(%23paint23_radial_98_388)"/><circle cx="193.035" cy="264.309" r="74.1253" transform="rotate(0.922257 193.035 264.309)" fill="url(%23paint24_radial_98_388)"/><circle cx="193.035" cy="264.309" r="74.1253" transform="rotate(0.922257 193.035 264.309)" fill="url(%23paint25_radial_98_388)"/><circle cx="193.035" cy="264.309" r="74.1253" transform="rotate(0.922257 193.035 264.309)" fill="url(%23paint26_radial_98_388)"/><circle cx="55.2915" cy="525.039" r="57.0575" transform="rotate(0.922257 55.2915 525.039)" fill="url(%23paint27_radial_98_388)"/><circle cx="55.2915" cy="525.039" r="57.0575" transform="rotate(0.922257 55.2915 525.039)" fill="url(%23paint28_radial_98_388)"/><circle cx="55.2915" cy="525.039" r="57.0575" transform="rotate(0.922257 55.2915 525.039)" fill="url(%23paint29_radial_98_388)"/><path d="M298.681 352.435C298.462 366.045 287.252 376.9 273.642 376.681C260.033 376.462 249.178 365.251 249.397 351.642C249.616 338.033 260.826 327.177 274.435 327.397C288.045 327.616 298.9 338.826 298.681 352.435Z" fill="url(%23paint30_radial_98_388)"/><path d="M298.681 352.435C298.462 366.045 287.252 376.9 273.642 376.681C260.033 376.462 249.178 365.251 249.397 351.642C249.616 338.033 260.826 327.177 274.435 327.397C288.045 327.616 298.9 338.826 298.681 352.435Z" fill="url(%23paint31_radial_98_388)"/><path d="M298.681 352.435C298.462 366.045 287.252 376.9 273.642 376.681C260.033 376.462 249.178 365.251 249.397 351.642C249.616 338.033 260.826 327.177 274.435 327.397C288.045 327.616 298.9 338.826 298.681 352.435Z" fill="url(%23paint32_radial_98_388)"/><circle cx="396.469" cy="589.319" r="20" transform="rotate(0.922257 396.469 589.319)" fill="url(%23paint33_radial_98_388)"/><circle cx="396.469" cy="589.319" r="20" transform="rotate(0.922257 396.469 589.319)" fill="url(%23paint34_radial_98_388)"/><circle cx="396.469" cy="589.319" r="20" transform="rotate(0.922257 396.469 589.319)" fill="url(%23paint35_radial_98_388)"/><circle cx="236.914" cy="93.9138" r="44.2079" transform="rotate(0.922257 236.914 93.9138)" fill="url(%23paint36_radial_98_388)"/><circle cx="236.914" cy="93.9138" r="44.2079" transform="rotate(0.922257 236.914 93.9138)" fill="url(%23paint37_radial_98_388)"/><circle cx="236.914" cy="93.9138" r="44.2079" transform="rotate(0.922257 236.914 93.9138)" fill="url(%23paint38_radial_98_388)"/><circle cx="24.5132" cy="431.514" r="15.2693" transform="rotate(0.922257 24.5132 431.514)" fill="url(%23paint39_radial_98_388)"/><circle cx="24.5132" cy="431.514" r="15.2693" transform="rotate(0.922257 24.5132 431.514)" fill="url(%23paint40_radial_98_388)"/><circle cx="24.5132" cy="431.514" r="15.2693" transform="rotate(0.922257 24.5132 431.514)" fill="url(%23paint41_radial_98_388)"/><defs><radialGradient id="paint0_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(305.74 168.904) rotate(57.7557) scale(164.959 169.582)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint1_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(305.74 168.904) rotate(57.7557) scale(164.959 169.582)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint2_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(305.74 168.904) rotate(57.7557) scale(164.959 169.582)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint3_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380.639 319.691) rotate(57.9244) scale(132.286 135.609)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint4_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380.639 319.691) rotate(57.9244) scale(132.286 135.609)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint5_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380.639 319.691) rotate(57.9244) scale(132.286 135.609)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint6_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(152.465 371.065) rotate(57.9244) scale(158.856 162.847)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint7_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(152.465 371.065) rotate(57.9244) scale(158.856 162.847)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint8_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(152.465 371.065) rotate(57.9244) scale(158.856 162.847)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint9_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(321.691 478.246) rotate(57.9244) scale(99.1438 101.634)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint10_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(321.691 478.246) rotate(57.9244) scale(99.1438 101.634)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint11_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(321.691 478.246) rotate(57.9244) scale(99.1438 101.634)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint12_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.372 551.629) rotate(57.9244) scale(69.8004 71.5538)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint13_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.372 551.629) rotate(57.9244) scale(69.8004 71.5538)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint14_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.372 551.629) rotate(57.9244) scale(69.8004 71.5538)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint15_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(51.9054 60.7314) rotate(58.5479) scale(172.636 175.065)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint16_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(51.9054 60.7314) rotate(58.5479) scale(172.636 175.065)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint17_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(51.9054 60.7314) rotate(58.5479) scale(172.636 175.065)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint18_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(362.877 42.8483) rotate(58.5479) scale(116.23 117.865)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint19_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(362.877 42.8483) rotate(58.5479) scale(116.23 117.865)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint20_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(362.877 42.8483) rotate(58.5479) scale(116.23 117.865)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint21_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-3.98886 258.883) rotate(58.5479) scale(135.267 137.17)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint22_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-3.98886 258.883) rotate(58.5479) scale(135.267 137.17)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint23_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-3.98886 258.883) rotate(58.5479) scale(135.267 137.17)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint24_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.284 224.467) rotate(58.5479) scale(111.873 113.447)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint25_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.284 224.467) rotate(58.5479) scale(111.873 113.447)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint26_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(177.284 224.467) rotate(58.5479) scale(111.873 113.447)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint27_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(43.1668 494.371) rotate(58.5479) scale(86.1135 87.3249)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint28_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(43.1668 494.371) rotate(58.5479) scale(86.1135 87.3249)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint29_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(43.1668 494.371) rotate(58.5479) scale(86.1135 87.3249)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint30_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(269.016 338.709) rotate(59.4702) scale(37.1957 37.7189)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint31_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(269.016 338.709) rotate(59.4702) scale(37.1957 37.7189)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint32_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(269.016 338.709) rotate(59.4702) scale(37.1957 37.7189)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint33_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(392.219 578.569) rotate(58.5479) scale(30.1848 30.6095)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint34_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(392.219 578.569) rotate(58.5479) scale(30.1848 30.6095)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint35_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(392.219 578.569) rotate(58.5479) scale(30.1848 30.6095)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint36_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(227.52 70.1521) rotate(58.5479) scale(66.7204 67.659)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint37_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(227.52 70.1521) rotate(58.5479) scale(66.7204 67.659)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint38_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(227.52 70.1521) rotate(58.5479) scale(66.7204 67.659)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint39_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.2684 423.306) rotate(58.5479) scale(23.0451 23.3693)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint40_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.2684 423.306) rotate(58.5479) scale(23.0451 23.3693)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint41_radial_98_388" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.2684 423.306) rotate(58.5479) scale(23.0451 23.3693)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient></defs></svg>');
+				background-image: url('data:image/svg+xml,<svg width="388" height="396" viewBox="0 0 388 396" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="61.041" cy="62.8577" rx="61.041" ry="62.8577" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 276.953 267.162)" fill="url(%23paint0_radial_548_565)"/><ellipse cx="61.041" cy="62.8577" rx="61.041" ry="62.8577" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 276.953 267.162)" fill="url(%23paint1_radial_548_565)"/><ellipse cx="61.041" cy="62.8577" rx="61.041" ry="62.8577" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 276.953 267.162)" fill="url(%23paint2_radial_548_565)"/><ellipse cx="60.496" cy="59.0426" rx="60.496" ry="59.0426" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 175.837 173.77)" fill="url(%23paint3_radial_548_565)"/><ellipse cx="60.496" cy="59.0426" rx="60.496" ry="59.0426" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 175.837 173.77)" fill="url(%23paint4_radial_548_565)"/><ellipse cx="60.496" cy="59.0426" rx="60.496" ry="59.0426" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 175.837 173.77)" fill="url(%23paint5_radial_548_565)"/><circle cx="77.5729" cy="77.5729" r="77.5729" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 175.132 323.783)" fill="url(%23paint6_radial_548_565)"/><circle cx="77.5729" cy="77.5729" r="77.5729" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 175.132 323.783)" fill="url(%23paint7_radial_548_565)"/><circle cx="77.5729" cy="77.5729" r="77.5729" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 175.132 323.783)" fill="url(%23paint8_radial_548_565)"/><circle cx="44.5091" cy="44.5091" r="44.5091" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 363.07 271.849)" fill="url(%23paint9_radial_548_565)"/><circle cx="44.5091" cy="44.5091" r="44.5091" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 363.07 271.849)" fill="url(%23paint10_radial_548_565)"/><circle cx="44.5091" cy="44.5091" r="44.5091" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 363.07 271.849)" fill="url(%23paint11_radial_548_565)"/><circle cx="16.7139" cy="16.7139" r="16.7139" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 94.3533 160.474)" fill="url(%23paint12_radial_548_565)"/><circle cx="16.7139" cy="16.7139" r="16.7139" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 94.3533 160.474)" fill="url(%23paint13_radial_548_565)"/><circle cx="16.7139" cy="16.7139" r="16.7139" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 94.3533 160.474)" fill="url(%23paint14_radial_548_565)"/><circle cx="27.1257" cy="27.1257" r="27.1257" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 272.233 320.796)" fill="url(%23paint15_radial_548_565)"/><circle cx="27.1257" cy="27.1257" r="27.1257" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 272.233 320.796)" fill="url(%23paint16_radial_548_565)"/><circle cx="27.1257" cy="27.1257" r="27.1257" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 272.233 320.796)" fill="url(%23paint17_radial_548_565)"/><circle cx="10.3554" cy="10.3554" r="10.3554" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 85.5436 113.86)" fill="url(%23paint18_radial_548_565)"/><circle cx="10.3554" cy="10.3554" r="10.3554" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 85.5436 113.86)" fill="url(%23paint19_radial_548_565)"/><circle cx="10.3554" cy="10.3554" r="10.3554" transform="matrix(0.589837 -0.807522 -0.807522 -0.589837 85.5436 113.86)" fill="url(%23paint20_radial_548_565)"/><defs><radialGradient id="paint0_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.0698 29.0717) rotate(59.2908) scale(94.1289 94.1547)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint1_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.0698 29.0717) rotate(59.2908) scale(94.1289 94.1547)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint2_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.0698 29.0717) rotate(59.2908) scale(94.1289 94.1547)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint3_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(47.6406 27.3072) rotate(57.9244) scale(89.7121 91.9657)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint4_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(47.6406 27.3072) rotate(57.9244) scale(89.7121 91.9657)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint5_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(47.6406 27.3072) rotate(57.9244) scale(89.7121 91.9657)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint6_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(61.0887 35.8775) rotate(58.5479) scale(117.076 118.723)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint7_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(61.0887 35.8775) rotate(58.5479) scale(117.076 118.723)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint8_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(61.0887 35.8775) rotate(58.5479) scale(117.076 118.723)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint9_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(35.0509 20.5854) rotate(58.5479) scale(67.175 68.1199)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint10_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(35.0509 20.5854) rotate(58.5479) scale(67.175 68.1199)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint11_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(35.0509 20.5854) rotate(58.5479) scale(67.175 68.1199)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint12_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.1622 7.73019) rotate(58.5479) scale(25.2254 25.5802)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint13_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.1622 7.73019) rotate(58.5479) scale(25.2254 25.5802)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint14_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.1622 7.73019) rotate(58.5479) scale(25.2254 25.5802)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint15_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.3615 12.5456) rotate(58.5479) scale(40.9392 41.5151)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint16_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.3615 12.5456) rotate(58.5479) scale(40.9392 41.5151)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint17_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.3615 12.5456) rotate(58.5479) scale(40.9392 41.5151)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint18_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.15485 4.78935) rotate(58.5479) scale(15.6288 15.8486)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint19_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.15485 4.78935) rotate(58.5479) scale(15.6288 15.8486)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient><radialGradient id="paint20_radial_548_565" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(8.15485 4.78935) rotate(58.5479) scale(15.6288 15.8486)"><stop stop-color="white"/><stop offset="0.703787" stop-color="%23D7E2F3"/><stop offset="0.862156" stop-color="%23C5D5ED"/><stop offset="1" stop-color="%23DEEBFF"/></radialGradient></defs></svg>');
 				background-size: cover;
 				background-position: center;
 				background-repeat: no-repeat;
@@ -477,7 +467,7 @@
 						width: 100%;
 						
 						.stories-list-item-title {
-							font-family: "Raleway", sans-serif;
+							font-family: "Roboto", sans-serif;
 							font-style: normal;
 							font-weight: 600;
 							font-size: rem(18);
@@ -534,21 +524,30 @@
 		}
 		
 		@include media-breakpoint-down(md) {
+			padding: rem(22) 0 rem(46) 0;
+			gap: rem(26);
+			
 			.partners-header {
-				padding: rem(22) 0;
-				background: #d1daf7;
+				padding: 0;
 				
 				.partners-title {
-					font-size: rem(18);
+					font-size: rem(24);
+					text-align: center;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 1.16;
+					color: #4D5593;
 				}
 			}
 			
 			.partners-content {
-				padding: rem(30) 0;
+				padding: 0;
 				
 				.partners-list {
 					flex-wrap: wrap;
 					row-gap: rem(20);
+					column-gap: rem(30);
+					justify-content: center;
 					
 					.partners-list-item {
 						max-width: 49%;
@@ -563,9 +562,6 @@
 	padding-top: clamp(rem(10), vw(80), rem(40));
 	padding-bottom: clamp(rem(10), vw(80), rem(40));
 	
-	&__header {
-	}
-	
 	&__header-inner {
 		display: flex;
 		align-items: center;
@@ -577,26 +573,10 @@
 		}
 	}
 	
-	/*&__main {
-		background-color: #6b8ff7;
-	}*/
-	
 	&__main-grid {
 		display: flex;
 		justify-content: space-between;
 		padding-block: clamp(rem(20), vw(24), rem(24));
-		@media (max-width: 1023.98px) {
-			grid-template-columns: repeat(3, 1fr);
-			row-gap: 20px;
-			column-gap: rem(37);
-		}
-		
-		@media (max-width: 767.98px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media (max-width: 389.98px) {
-			grid-template-columns: 1fr;
-		}
 	}
 	
 	&__main-item {
@@ -605,30 +585,54 @@
 		gap: rem(16);
 	}
 	
-	/*&__item-icon {
-		flex: 0 0 rem(70);
-		height: rem(70);
-		border: rem(2) solid #ffffff;
-		border-radius: 50%;
-		
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		
-		img {
-			min-width: rem(40);
-		}
-	}*/
-	
 	&__item-text {
 		p {
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Roboto', sans-serif;
 			font-style: normal;
 			font-weight: 500;
-			font-size: rem(30);
-			line-height: 0.83;
+			font-size: rem(26);
+			line-height: 0.95;
 			color: #313F57;
 			white-space: nowrap;
+		}
+	}
+	
+	@include media-breakpoint-down(md) {
+		&__header-inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: clamp(rem(4), vw(80), rem(20));
+			
+			h2 {
+				text-align: center;
+			}
+		}
+		
+		&__main-grid {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: rem(10);
+			padding-block: clamp(rem(20), vw(24), rem(24));
+		}
+		
+		&__main-item {
+			display: flex;
+			align-items: center;
+			gap: rem(16);
+		}
+		
+		&__item-text {
+			p {
+				font-family: 'Roboto', sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: rem(20);
+				line-height: 1.8;
+				color: #313F57;
+				white-space: nowrap;
+			}
 		}
 	}
 }

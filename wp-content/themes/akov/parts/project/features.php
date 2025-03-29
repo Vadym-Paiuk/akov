@@ -8,7 +8,9 @@ if ( empty( $section ) ) {
 
 <div class="container"
      data-aos="zoom-in"
-     data-aos-duration="900">
+
+
+>
 	<div class="single__projects-content-features <?php if ( ! empty( $section['vertical'] ) ) {
 		echo 'vertical';
 	} ?>">

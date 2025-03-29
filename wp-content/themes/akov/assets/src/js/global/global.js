@@ -6,7 +6,11 @@ class Global {
         this.loader();
         this.dropdown();
         this.mobileMenu();
-        this.pricingTabs();
+        this.pricingPerProjectTabs();
+        this.pricingPerProjectAccordion();
+        this.pricingPerMonthTabs();
+        this.menuHeader();
+        this.menuHeaderMobile();
     }
 
     static getInstance() {
@@ -17,7 +21,77 @@ class Global {
         return this.instance;
     }
 
-    pricingTabs() {
+    menuHeader() {
+        $(document).on('click', '.header .menu li.menu-item-has-children > a', function (e) {
+            e.preventDefault();
+            e.stopPropagation(); // Prevent bubbling
+
+            let submenu = $(this).siblings(".submenu-wrapper");
+
+            $(this).parent().toggleClass('active');
+
+            if (submenu.is(":visible")) {
+                submenu.slideUp(200);
+                $(".menu-overlay").fadeOut(200);
+                $(".menu-header-overlay").fadeOut(200);
+
+                $('.header .menu li.menu-item-has-children').removeClass('active');
+            } else {
+                $(".submenu-wrapper").not(submenu).slideUp(200); // Close other open submenus
+                submenu.slideDown(200);
+                $(".menu-overlay").fadeIn(200);
+                $(".menu-header-overlay").fadeIn(200);
+            }
+        });
+
+        // Close dropdown when clicking outside (but NOT inside submenu)
+        $(document).click(function (event) {
+            if (!$(event.target).closest(".header .menu").length) {
+                $(".submenu-wrapper").slideUp(200);
+                $(".menu-overlay").fadeOut(200);
+                $(".menu-header-overlay").fadeOut(200);
+
+                $('.header .menu li.menu-item-has-children').removeClass('active');
+            }
+        });
+
+        $(".menu-overlay").click(function () {
+            $(".submenu-wrapper").slideUp(200);
+            $(this).fadeOut(200);
+            $('.header .menu li.menu-item-has-children').removeClass('active');
+        });
+
+        $(".menu-header-overlay").click(function () {
+            $(".submenu-wrapper").slideUp(200);
+            $(this).fadeOut(200);
+            $('.header .menu li.menu-item-has-children').removeClass('active');
+        });
+
+        // Prevent submenu from closing when clicking inside
+        $(document).on('click', '.submenu-wrapper', function (e) {
+            e.stopPropagation();
+        });
+    }
+
+    menuHeaderMobile() {
+        $(document).on('click', '.header .menu-header-links li.menu-item-has-children > a', function (e) {
+            e.preventDefault();
+            e.stopPropagation(); // Prevent bubbling
+
+            let submenu = $(this).siblings(".submenu-wrapper");
+
+            $(this).parent().toggleClass('active');
+
+            if (submenu.is(":visible")) {
+                submenu.slideUp(200);
+            } else {
+                $(".submenu-wrapper").not(submenu).slideUp(200); // Close other open submenus
+                submenu.slideDown(200);
+            }
+        });
+    }
+
+    pricingPerProjectTabs() {
         $(document).on('click', '.pricing-page__per-project__tabs-header-title', function (e) {
             e.preventDefault();
 
@@ -37,6 +111,38 @@ class Global {
 
             // Add 'active' class to the clicked title and the corresponding tab
             $('.pricing-page__per-project__tabs-body__tab').eq(index).addClass('active');
+            $(this).addClass('active');
+        });
+    }
+
+    pricingPerProjectAccordion() {
+        $(document).on('click', '.pricing-page__per-project-mobile__accordion-header', function (e) {
+            e.preventDefault();
+
+            if ($(this).children().hasClass('hidden')) {
+                return false;
+            }
+
+            $(this).parent().toggleClass('active');
+        });
+    }
+
+    pricingPerMonthTabs() {
+        $(document).on('click', '.pricing-page__per-month__list-mobile-tabs-header-tab', function (e) {
+            e.preventDefault();
+
+            if ($(this).hasClass('active')) {
+                return false;
+            }
+
+            let index = $(this).index(); // Get the index of the clicked tab
+
+            // Remove 'active' class from all titles and tabs
+            $('.pricing-page__per-month__list-mobile-tabs-header-tab').removeClass('active');
+            $('.pricing-page__per-month__list-mobile-tabs-body__tab').removeClass('active');
+
+            // Add 'active' class to the clicked title and the corresponding tab
+            $('.pricing-page__per-month__list-mobile-tabs-body__tab').eq(index).addClass('active');
             $(this).addClass('active');
         });
     }

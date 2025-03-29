@@ -96,7 +96,7 @@ a {
 	font-family: "Roboto", sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: rem(48);
+	font-size: rem(26);
 	line-height: 1.17;
 	color: #313F57;
 	width: 100%;
@@ -104,6 +104,33 @@ a {
 	@include media-breakpoint-down(md) {
 		font-size: rem(20);
 	}
+}
+
+.menu-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 70;
+	display: none;
+}
+
+.menu-header-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 70;
+	display: none;
+}
+
+[data-aos="zoom-in"] {
+	transform: scale(0.9);
+	opacity: 0;
 }
 
 .no-scroll {

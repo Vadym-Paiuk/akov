@@ -15,24 +15,35 @@
 			border-radius: rem(12);
 			overflow: hidden;
 			background: #313F57;
+			transition: all 5.3s ease;
+			position: relative;
 			
 			&.soon:hover {
-				background: #12141799;
+				background: #313F57;
 				
 				img {
-					display: none;
+					opacity: 0;
+					visibility: hidden;
 				}
 				
 				.more-wrap {
-					display: flex;
+					opacity: 1;
+					visibility: visible;
 				}
 			}
 			
 			.more-wrap {
-				display: none;
-				height: rem(315);
+				display: flex;
+				position: absolute;
+				width: 100%;
+				height: calc(100% - rem(80));
+				top: 0;
+				left: 0;
+				opacity: 0;
+				visibility: hidden;
 				justify-content: center;
 				align-items: center;
+				transition: opacity 0.5s ease, visibility 0.5s ease;
 			}
 			
 			.more {
@@ -41,7 +52,7 @@
 				font-family: 'Roboto', sans-serif;
 				font-style: normal;
 				font-weight: 500;
-				font-size: rem(36);
+				font-size: rem(24);
 				line-height: 1.16;
 				text-align: center;
 				text-transform: uppercase;
@@ -56,14 +67,18 @@
 				width: 100%;
 				height: rem(315);
 				object-fit: cover;
+				opacity: 1;
+				visibility: visible;
+				transition: opacity 0.5s ease, visibility 0.5s ease;
 			}
 		}
 		
 		&-categories {
-			padding: rem(30) rem(40);
+			padding: rem(30) rem(20);
 			display: flex;
 			justify-content: space-between;
-			gap: rem(40);
+			align-items: center;
+			gap: rem(20);
 			background: #313F57;
 			
 			p {
@@ -73,6 +88,8 @@
 				font-size: rem(16);
 				line-height: 1.18;
 				color: #FFFFFF;
+				flex: 1;
+				text-align: center;
 			}
 		}
 		
@@ -107,6 +124,37 @@
 					width: 100%;
 					height: rem(200);
 					object-fit: cover;
+				}
+				
+				.more-wrap {
+					display: flex;
+					position: absolute;
+					width: 100%;
+					height: calc(100% - rem(51));
+					top: 0;
+					left: 0;
+					opacity: 0;
+					visibility: hidden;
+					justify-content: center;
+					align-items: center;
+					transition: opacity 0.5s ease, visibility 0.5s ease;
+				}
+				
+				.more {
+					width: 100%;
+					padding: rem(20);
+					font-family: 'Roboto', sans-serif;
+					font-style: normal;
+					font-weight: 500;
+					font-size: rem(20);
+					line-height: 1.16;
+					text-align: center;
+					text-transform: uppercase;
+					color: $white;
+					background: #6287D7;
+					border: none;
+					margin: auto 0;
+					cursor: pointer;
 				}
 			}
 			
@@ -168,7 +216,7 @@
 		}
 		
 		p {
-			font-family: "Raleway", sans-serif;
+			font-family: "Roboto", sans-serif;
 			font-style: normal;
 			font-weight: 400;
 			font-size: rem(18);

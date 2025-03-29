@@ -9,18 +9,17 @@
 	.container {
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		row-gap: rem(30);
 		flex-wrap: wrap;
-		
-		p {
-			font-family: 'Raleway', sans-serif;
-			font-style: normal;
-			font-weight: 500;
-			font-size: rem(14);
-			line-height: 1.2;
-			color: $white;
-		}
+	}
+	
+	p {
+		font-family: 'Roboto', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: 1.2;
+		color: #A6AAC9;
 	}
 	
 	&__block {
@@ -30,8 +29,16 @@
 		
 		&-copyright {
 			display: flex;
-			//align-items: flex-end;
-			justify-content: flex-start;
+			justify-content: flex-end;
+			
+			p {
+				font-family: 'Roboto', sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: rem(14);
+				line-height: 1.14;
+				color: #A6AAC9;
+			}
 		}
 	}
 	
@@ -41,11 +48,11 @@
 		gap: rem(16);
 		
 		.menu-title {
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Roboto', sans-serif;
 			font-style: normal;
 			font-weight: 500;
-			font-size: 14px;
-			line-height: 16px;
+			font-size: rem(14);
+			line-height: 1.14;
 			color: #A6AAC9;
 		}
 		
@@ -55,7 +62,7 @@
 			
 			li {
 				a {
-					font-family: 'Raleway', sans-serif;
+					font-family: 'Roboto', sans-serif;
 					font-style: normal;
 					font-weight: 500;
 					font-size: 14px;
@@ -71,6 +78,80 @@
 	}
 	
 	@include media-breakpoint-down(md) {
-		padding: rem(40) 0;
+		padding: rem(20) 0 rem(40) 0;
+		
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			row-gap: rem(20);
+			flex-wrap: wrap;
+			flex-direction: column;
+			
+			p {
+				font-family: 'Roboto', sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: rem(14);
+				line-height: 1.2;
+				color: #A6AAC9;
+			}
+		}
+		
+		&__block {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			
+			&-copyright {
+				padding-top: rem(20);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+				p {
+					font-family: 'Roboto', sans-serif;
+					font-style: normal;
+					font-weight: 500;
+					font-size: rem(14);
+					color: #A6AAC9;
+				}
+			}
+		}
+		
+		&__menu {
+			display: flex;
+			flex-direction: column;
+			gap: rem(10);
+			
+			.menu-title {
+				font-family: 'Roboto', sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 16px;
+				color: #A6AAC9;
+			}
+			
+			ul {
+				display: flex;
+				gap: rem(16);
+				
+				li {
+					a {
+						font-family: 'Roboto', sans-serif;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 14px;
+						line-height: 1.79;
+						color: #FFFFFF;
+						
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
 	}
 }

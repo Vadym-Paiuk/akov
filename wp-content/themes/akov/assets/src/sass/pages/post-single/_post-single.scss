@@ -1,0 +1,83 @@
+.single {
+	&__post {
+		background: #ffffff;
+		padding: rem(40) 0;
+		
+		&__header {
+			display: flex;
+			flex-direction: column;
+			gap: rem(7);
+			
+			&-tags {
+				display: flex;
+				gap: rem(16);
+				
+				&-item {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 8px 24px;
+					background-color: rgba(234, 238, 255, 1);
+					border-radius: rem(12);
+					font-family: 'Roboto', sans-serif;
+					font-style: normal;
+					font-weight: 400;
+					font-size: rem(14);
+					line-height: 1.2;
+					color: $black;
+				}
+			}
+			
+			&-title {
+				font-style: normal;
+				font-weight: 700;
+				font-size: rem(28);
+				line-height: 2.36;
+				text-transform: uppercase;
+				color: #313F57;
+			}
+		}
+		
+		&-content {
+			display: flex;
+			flex-direction: column;
+			gap: rem(20);
+			
+			p {
+				font-style: normal;
+				font-weight: 300;
+				font-size: rem(18);
+				line-height: 1.2;
+				color: #000000;
+			}
+			
+			strong, b {
+				font-weight: 700;
+			}
+			
+			ul, ol {
+				font-weight: 300;
+				font-size: rem(18);
+				line-height: 1.2;
+				color: #000000;
+				margin-left: rem(25);
+			}
+			
+			ul {
+				list-style: disc;
+			}
+			
+			ol {
+				list-style: decimal;
+			}
+			
+			img {
+				width: 100%;
+			}
+		}
+	}
+	
+	@include media-breakpoint-down(md) {
+	
+	}
+}
