@@ -163,7 +163,7 @@ class Theme_Setup {
 			true );
 		wp_enqueue_script( 'main-js',
 			get_template_directory_uri() . '/assets/dist/js/main.js',
-			array(),
+			array( 'jquery' ),
 			THEME_VERSION,
 			true );
 	}
