@@ -18,11 +18,11 @@ class HomePage {
 $(function () {
     HomePage.getInstance();
 
-    /*AOS.init({
+    AOS.init({
         easing: 'ease-out-quart',
         duration: 1000,
         once: true // Ensures animations happen only once
-    });*/
+    });
 
     function initSlider() {
         if (!document.querySelector('.swiper')) return;
