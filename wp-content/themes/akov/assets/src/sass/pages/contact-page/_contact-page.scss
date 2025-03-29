@@ -23,6 +23,7 @@
 				gap: rem(16);
 				
 				.section-title {
+					font-size: rem(28);
 					text-align: center;
 				}
 				
@@ -35,7 +36,7 @@
 						font-style: normal;
 						font-weight: 400;
 						font-size: rem(18);
-						line-height: 1.166;
+						line-height: 2;
 						color: $black;
 						text-align: center;
 						
@@ -162,9 +163,10 @@
 						width: 100%;
 						
 						p {
-							font-weight: 500;
-							font-size: rem(16);
+							font-weight: 400;
+							font-size: rem(18);
 							line-height: normal;
+							text-align: left;
 							
 							a {
 								font-weight: 500;

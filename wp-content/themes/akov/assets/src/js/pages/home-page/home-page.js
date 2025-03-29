@@ -1,4 +1,5 @@
 import Global from "../../global/global";
+
 // import Swiper, { EffectCards, Navigation, Pagination } from "swiper";
 
 class HomePage {
@@ -17,13 +18,17 @@ class HomePage {
 $(function () {
     HomePage.getInstance();
 
-    AOS.init();
+    AOS.init({
+        easing: 'ease-out-quart',
+        duration: 1000,
+        once: true // Ensures animations happen only once
+    });
 
     function initDisableMasonry() {
         let msnry;
 
         let box = document.querySelector('.grid')
-        if(!box) return;
+        if (!box) return;
         let boxItems = document.querySelectorAll('.grid-item');
         let itemWidth = box.offsetWidth / 4 - 70;
         if (window.innerWidth < 1023.98 && document.querySelector('.grid')) {
@@ -54,6 +59,7 @@ $(function () {
             });
         }
     }
+
     initDisableMasonry();
 
     function initSlider() {
@@ -64,7 +70,6 @@ $(function () {
 
         mobileSliders.forEach((slider, index) => {
             let cardsMobileSlider;
-
 
 
             const breakpoint = window.matchMedia('(min-width:1023.98px)');
@@ -80,6 +85,7 @@ $(function () {
                     return enableSwiper();
                 }
             };
+
             function enableSwiper() {
                 cardsMobileSlider = new Swiper(slider, {
                     observer: true,
@@ -112,6 +118,7 @@ $(function () {
             breakpointChecker();
         })
     }
+
     initSlider();
 
 

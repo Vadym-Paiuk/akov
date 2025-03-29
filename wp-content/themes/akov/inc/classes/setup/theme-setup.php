@@ -27,7 +27,9 @@ class Theme_Setup {
 		add_action( 'wp_enqueue_scripts', [ $this, 'dequeue_style' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'localize_script' ] );
 		add_filter( 'wpcf7_autop_or_not', '__return_false' );
-		add_action( 'init', [ $this, 'deactivate_gutenberg_editor' ] );
+		add_filter( 'use_block_editor_for_post_type', [ $this, 'deactivate_gutenberg_editor' ], 10, 2 );
+		add_action( 'init', [ $this, 'ai1wm_exclude_node_modules' ] );
+		add_action( 'pre_get_posts', [ $this, 'include_drafts_in_archive' ] );
 	}
 	
 	public static function bootstrap() {
@@ -38,12 +40,19 @@ class Theme_Setup {
 		menu::get_instance();
 	}
 	
-	public function deactivate_gutenberg_editor() {
-		if ( class_exists( 'WP_Block_Editor_Context' ) ) {
-			add_filter( 'use_block_editor_for_post', '__return_false', 10 );
-			remove_theme_support( 'core-block-patterns' );
-			remove_theme_support( 'block-templates' );
+	public function include_drafts_in_archive( $query ) {
+		if ( ! is_admin() && $query->is_main_query() && is_home() ) {
+			$query->set( 'post_status', array( 'publish', 'draft' ) );
+			$query->set( 'order', 'ASC' );
 		}
+	}
+	
+	public function deactivate_gutenberg_editor( $use_block_editor, $post_type ) {
+		if ( $post_type !== 'post' ) {
+			return false; // Disable Gutenberg for all post types except 'post'
+		}
+		
+		return $use_block_editor;
 	}
 	
 	public function advanced_custom_fields_options() {
@@ -103,6 +112,14 @@ class Theme_Setup {
 	
 	public function dequeue_hooks() {
 		add_filter( 'big_image_size_threshold', '__return_false' );
+	}
+	
+	public function ai1wm_exclude_node_modules() {
+		add_filter( 'ai1wm_exclude_themes_from_export', function ( $exclude_filters ) {
+			$exclude_filters[] = 'akov/node_modules';
+			
+			return $exclude_filters;
+		} );
 	}
 	
 	public function register_menus() {

@@ -10,14 +10,18 @@ $path = get_stylesheet_directory_uri();
 		<div class="projects-grid__inner">
 			<div class="projects-grid__header"
 			     data-aos="zoom-in"
-			     data-aos-duration="900">
+			
+			
+			>
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 			</div>
 			
 			<div class="projects-grid__items grid"
 			     data-aos="zoom-in"
-			     data-aos-duration="900">
+			
+			
+			>
 				<?php
 				$projects = get_field( 'projects' );
 				foreach ( $projects as $project ):

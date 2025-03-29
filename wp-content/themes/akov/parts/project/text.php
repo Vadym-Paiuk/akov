@@ -8,7 +8,9 @@ if ( empty( $section ) ) {
 
 <div class="container"
      data-aos="zoom-in"
-     data-aos-duration="900">
+
+
+>
 	<div class="single__projects-content-text">
 		<?php if ( ! empty( $section['title'] ) ): ?>
 			<p class="single__projects-content-text-title">

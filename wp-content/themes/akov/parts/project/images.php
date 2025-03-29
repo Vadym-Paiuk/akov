@@ -8,11 +8,18 @@ if ( empty( $section ) ) {
 
 <div class="container"
      data-aos="zoom-in"
-     data-aos-duration="900">
-	<div class="single__projects-content-images">
+
+
+>
+	<div class="single__projects-content-images <?php if ( ! empty( $section['background'] ) ) {
+		echo 'background';
+	} ?>"
+	     <?php if ( ! empty( $section['background'] ) ): ?>style="background-color: <?php echo $section['background_color']; ?>"<?php endif; ?>>
 		<?php foreach ( $section['list'] as $image ): ?>
 			<?php if ( ! empty( $image['image'] ) ): ?>
-				<?php echo wp_get_attachment_image( $image['image'], 'full' ); ?>
+				<img src="<?php echo wp_get_attachment_image_src( $image['image'], 'full' )[0]; ?>"
+				     alt="">
+				<?php //echo wp_get_attachment_image( $image['image'], 'full' ); ?>
 			<?php endif; ?>
 		<?php endforeach; ?>
 	</div>

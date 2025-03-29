@@ -46,5 +46,39 @@ class CPT {
 			
 			)
 		);
+		
+		register_post_type(
+			'service',
+			array(
+				'labels'            => array(
+					'name'               => 'Services',
+					'singular_name'      => 'Services',
+					'add_new'            => 'Add New',
+					'add_new_item'       => 'Add New Services',
+					'edit_item'          => 'Edit Services',
+					'new_item'           => 'New Services',
+					'view_item'          => 'View Services',
+					'search_items'       => 'Search Services',
+					'not_found'          => 'Services Not Found',
+					'not_found_in_trash' => 'is empty',
+					'menu_name'          => 'Services',
+				),
+				'public'            => true,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'show_in_nav_menus' => true,
+				'show_tagcloud'     => true,
+				'query_var'         => true,
+				'menu_icon'         => 'dashicons-hammer',
+				'supports'          => array( 'title', 'thumbnail', 'editor' ),
+				'hierarchical'      => true,
+				'has_archive'       => false,
+				'rewrite'           => array(
+					'slug'       => 'services',
+					'with_front' => false
+				),
+			
+			)
+		);
 	}
 }

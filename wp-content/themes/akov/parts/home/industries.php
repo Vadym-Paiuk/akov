@@ -8,7 +8,9 @@ if ( empty( $section ) ) {
 
 <section class="industries"
          data-aos="zoom-in"
-         data-aos-duration="900">
+
+
+>
 	<div class="industries__header">
 		<div class="container">
 			<div class="industries__header-inner">
