@@ -24,44 +24,6 @@ $(function () {
         once: true // Ensures animations happen only once
     });
 
-    function initDisableMasonry() {
-        let msnry;
-
-        let box = document.querySelector('.grid')
-        if (!box) return;
-        let boxItems = document.querySelectorAll('.grid-item');
-        let itemWidth = box.offsetWidth / 4 - 70;
-        if (window.innerWidth < 1023.98 && document.querySelector('.grid')) {
-            if (msnry) {
-                msnry.destroy();
-                msnry = null;
-
-            }
-        } else if (window.innerWidth > 1023.98 && document.querySelector('.grid')) {
-            let seItemsWidth = function () {
-                boxItems.forEach((item, index) => {
-                    if (index === 0 || index % 3 === 0) {
-                        item.style.width = `${box.offsetWidth / 2 - 70}px`;
-                    } else {
-                        item.style.width = `${box.offsetWidth / 4 - 70}px`;
-
-                    }
-                })
-            }
-            seItemsWidth();
-            msnry = new Masonry('.grid', {
-                itemSelector: '.grid-item',
-                columnWidth: itemWidth,
-                fitWidth: true,
-                resize: false,
-                gutter: 70,
-                transitionDuration: '0.8s'
-            });
-        }
-    }
-
-    initDisableMasonry();
-
     function initSlider() {
         if (!document.querySelector('.swiper')) return;
 
@@ -121,9 +83,4 @@ $(function () {
 
     initSlider();
 
-
-    $(window).on('resize', function () {
-        initDisableMasonry();
-
-    });
 });
