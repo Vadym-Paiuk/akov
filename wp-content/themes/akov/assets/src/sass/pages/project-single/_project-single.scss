@@ -237,6 +237,16 @@
 					width: 65%;
 				}
 			}
+			
+			&-video {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+				video {
+					width: 100%;
+				}
+			}
 		}
 	}
 	
