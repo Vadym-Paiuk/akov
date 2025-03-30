@@ -95,11 +95,11 @@
 			flex-direction: column;
 			flex: 1;
 			background: #313F57;
-			border-radius: 6px;
-			overflow: hidden;
 			padding-bottom: rem(36);
+			border-radius: 10px;
 			
 			&-header {
+				width: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -108,8 +108,9 @@
 				padding: rem(20) rem(24);
 				color: #313F57;
 				background: #EAEEFF;
-				border: none;
 				position: relative;
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
 				
 				h3 {
 					font-family: 'Roboto', sans-serif;
